@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+#wrap {
+	width: 700px;
+	margin: 0 auto;
+	> header {
+		color: #696f74;
+	} //end of header
+
+	> section {
+		> .slides {
+			position: relative;
+			width: 100%;
+			height: 530px;
+			// outline: 1px solid red;
+
+			> .slides-pagination {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: center;
+				position: absolute;
+				width: 100%;
+				left: 50%;
+				top: 0;
+				margin-left: -350px;
+				> li {
+					width: 80px;
+					margin: 0 10px;
+					// outline: 1px solid pink;
+
+					&:nth-of-type(1) > a {
+						background-position: 0 0;
+					}
+					&:nth-of-type(1):hover > a,
+					&.on > a {
+						background-position: 0 -90px;
+					}
+
+					&:nth-of-type(2) > a {
+						background-position: -80px 0;
+					}
+					&:nth-of-type(2):hover > a,
+					&:nth-of-type(2).on > a {
+						background-position: -80px -90px;
+					}
+
+					&:nth-of-type(3) > a {
+						background-position: -160px 0;
+					}
+					&:nth-of-type(3):hover > a,
+					&:nth-of-type(3).on > a {
+						background-position: -160px -90px;
+					}
+
+					&:nth-of-type(4) > a {
+						background-position: -240px 0;
+					}
+					&:nth-of-type(4):hover > a,
+					&:nth-of-type(4).on > a {
+						background-position: -240px -90px;
+					}
+
+					&:nth-of-type(5) > a {
+						background-position: -320px 0;
+					}
+					&:nth-of-type(5):hover > a,
+					&:nth-of-type(5).on > a {
+						background-position: -320px -90px;
+					}
+
+					&:nth-of-type(6) > a {
+						background-position: -400px 0;
+					}
+					&:nth-of-type(6):hover > a,
+					&:nth-of-type(6).on > a {
+						background-position: -400px -90px;
+					}
+
+					> a {
+						display: block;
+						height: 90px;
+						text-indent: -9999px;
+						background-image: url(./../images/btn_talk.png);
+					} //end of a
+				} //end of li
+			} //end of .slides-pagination
+
+			> .slides-box {
+				overflow: hidden;
+				position: absolute;
+				left: 50%;
+				top: 95px;
+				width: 478px;
+				height: 438px;
+				margin-left: -239px;
+				// outline: 1px solid greenyellow;
+				> .slides-container {
+					display: flex;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: calc(478px * 6);
+					> li {
+						width: 478px;
+						background-position: center center;
+						background-size: cover;
+
+						&:nth-of-type(1) {
+							background-image: url(./../images/img_talk_cont1.png);
+						}
+						&:nth-of-type(2) {
+							background-image: url(./../images/img_talk_cont2.png);
+						}
+						&:nth-of-type(3) {
+							background-image: url(./../images/img_talk_cont3.png);
+						}
+						&:nth-of-type(4) {
+							background-image: url(./../images/img_talk_cont4.png);
+						}
+						&:nth-of-type(5) {
+							background-image: url(./../images/img_talk_cont5.png);
+						}
+						&:nth-of-type(6) {
+							background-image: url(./../images/img_talk_cont6.png);
+						}
+
+						> a {
+							display: block;
+							height: 438px;
+							text-indent: -9999px;
+						} //end of a
+					} //end of li
+				} //end of .slides-container
+			} //end of .slides-box
+
+			> .slides-navigation {
+				display: block;
+				position: absolute;
+				top: 50%;
+				width: 44px;
+				height: 44px;
+				margin-top: -22px;
+				text-indent: -9999px;
+				background-image: url(./../images/img_talk_button.png);
+				// outline: 1px solid skyblue;
+
+				&.slides-prev {
+					left: 0;
+					background-position: 0 0;
+				}
+				&.slides-prev:hover {
+					background-position: -70px 0;
+				}
+
+				&.slides-next {
+					right: 0;
+					background-position: 0 -70px;
+				}
+				&.slides-next:hover {
+					background-position: -70px -70px;
+				}
+			} //end of .slides-navigation
+		} //end of .slides
+	} //end of section
+
+	> footer {
+		> address {
+			color: #696f74;
+		}
+	}
+} //end of #wrap
